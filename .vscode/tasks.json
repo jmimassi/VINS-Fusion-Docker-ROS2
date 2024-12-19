@@ -1,0 +1,45 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "colcon build",
+            "type": "shell",
+            "command": "source /opt/ros/foxy/setup.bash && source /workspaces/VINS-Fusion-Docker-ROS2/ros2_ws/install/local_setup.bash && cd /workspaces/VINS-Fusion-Docker-ROS2 && colcon build",
+            "group": "build",
+            "presentation": {
+                "panel": "new",
+                "group": "vins"
+            }
+        },
+        {
+            "label": "ROS Bag Play",
+            "type": "shell",
+            "command": "source /opt/ros/foxy/setup.bash && source /workspaces/VINS-Fusion-Docker-ROS2/ros2_ws/install/local_setup.bash && ros2 bag play MH_01_easy",
+            "group": "build",
+            "presentation": {
+                "panel": "new",
+                "group": "vins"
+            }
+        },
+        {
+            "label": "RVIZ",
+            "type": "shell",
+            "command": "source /opt/ros/foxy/setup.bash && source /workspaces/VINS-Fusion-Docker-ROS2/ros2_ws/install/local_setup.bash && ros2 launch vins vins_rviz.launch.xml ",
+            "group": "build",
+            "presentation": {
+                "panel": "new",
+                "group": "vins"
+            }
+        },
+        {
+            "label": "VINS Fusion",
+            "type": "shell",
+            "command": "source /opt/ros/foxy/setup.bash && source /workspaces/VINS-Fusion-Docker-ROS2/ros2_ws/install/local_setup.bash && ros2 run vins vins_node /workspaces/VINS-Fusion-Docker-ROS2/ros2_ws/src/VINS-Fusion-ROS2/config/euroc/euroc_stereo_imu_config.yaml ",
+            "group": "build",
+            "presentation": {
+                "panel": "new",
+                "group": "vins"
+            }
+        }
+    ]
+}
