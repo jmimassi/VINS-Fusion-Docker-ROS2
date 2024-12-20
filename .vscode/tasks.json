@@ -4,7 +4,7 @@
         {
             "label": "colcon build",
             "type": "shell",
-            "command": "source /opt/ros/foxy/setup.bash && source /workspaces/VINS-Fusion-Docker-ROS2/ros2_ws/install/local_setup.bash && cd /workspaces/VINS-Fusion-Docker-ROS2 && colcon build",
+            "command": "source /opt/ros/foxy/setup.bash && source /workspaces/VINS-Fusion-Docker-ROS2/ros2_ws/install/local_setup.bash && cd /workspaces/VINS-Fusion-Docker-ROS2/ros2_ws && colcon build",
             "group": "build",
             "presentation": {
                 "panel": "new",
