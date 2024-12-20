@@ -112,12 +112,12 @@ RUN echo "source /opt/ros/foxy/setup.bash" >> /root/.bashrc
 RUN pip install rosbags
 
 # Séparation des couches pour une installation plus flexible
-# RUN pip install torch
-# RUN pip install torchvision
-# RUN pip install numpy
-# RUN pip install opencv-python==4.5.5.64
-# RUN pip install matplotlib
-# RUN pip install kornia==0.6.11
+RUN pip install torch
+RUN pip install torchvision
+RUN pip install numpy
+RUN pip install opencv-python==4.5.5.64
+RUN pip install matplotlib
+RUN pip install kornia==0.6.11
 
 # Install Tkinter (python3-tk) and dependencies
 RUN apt-get update && apt-get install -y \

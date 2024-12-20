@@ -40,6 +40,16 @@
                 "panel": "new",
                 "group": "vins"
             }
+        },
+        {
+            "label": "LightGlue Feature Tracker",
+            "type": "shell",
+            "command": "source /opt/ros/foxy/setup.bash && source /workspaces/VINS-Fusion-Docker-ROS2/ros2_ws/install/local_setup.bash && ros2 launch lightglue_feature_tracker feature_tracker.launch.py",
+            "group": "build",
+            "presentation": {
+                "panel": "new",
+                "group": "vins"
+            }
         }
     ]
 }
